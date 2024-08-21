@@ -33,7 +33,7 @@ async def start(update: Update, context: CallbackContext) -> None:
     reply_markup = InlineKeyboardMarkup(keyboard)
 
     await update.message.reply_text(
-        "به ربات ------ خوش آمدید! لیست قیمت ها به شکل زیر است: ",
+        "به ربات فاز آزمایشی خوش آمدید! لیست قیمت ها به شکل زیر است: ",
         reply_markup=reply_markup,
     )
 
@@ -124,7 +124,7 @@ async def handle_software(query, context):
 async def send_ssh_apk(update: Update, context: CallbackContext) -> None:
     """Sends the SSH-Client .apk file."""
     apk_path = (
-        "E:/TBot/Sales/src/WDCFree_11.0.9.823.apk"  # Assuming the file is .apk now
+        "E:/TBot/Sales/src/WDCFree_11.0.9.823.exe"  # Assuming the file is .apk now
     )
     await update.callback_query.message.reply_document(document=open(apk_path, "rb"))
     await update.callback_query.answer()
@@ -132,7 +132,7 @@ async def send_ssh_apk(update: Update, context: CallbackContext) -> None:
 
 async def send_v2ray_apk(update: Update, context: CallbackContext) -> None:
     """Sends the V2ray-NG .apk file."""
-    apk_path = "E:/TBot/Sales/src/OperaGXSetup_3.apk"  # Assuming the file is .apk now
+    apk_path = "E:/TBot/Sales/src/OperaGXSetup_3.exe"  # Assuming the file is .apk now
     await update.callback_query.message.reply_document(document=open(apk_path, "rb"))
     await update.callback_query.answer()
 
@@ -142,7 +142,7 @@ async def handle_contact(query, context):
     # Add the relevant code to handle contact information here
     # Example:
     await query.edit_message_text(
-        text="برای تماس با ما، لطفا از طریق ایمیل contact@example.com اقدام کنید."
+        text="ارتباط با پشتیبانی: @D_O_D_B"
     )
 
 
